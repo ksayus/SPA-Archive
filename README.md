@@ -2,7 +2,7 @@
 
 《死潮》同人档案站。以桑瑞思（Sunrise）的归档口吻整理城市、使徒、边境、科研与日常记录，采用深褐纸本、米色档案纸与红色印章的视觉风格。
 
-线上地址：<https://ksayus.github.io/SPA-Archive/>
+线上地址：<https://ksayus.github.io/SPA-Archive/>（账号启用自定义域名后会跳转至 <https://ksayus.top/SPA-Archive/>）
 
 ## 功能
 
