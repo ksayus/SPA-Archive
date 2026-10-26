@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#120d09">
+  <meta name="description" content="SPA 中央档案库：桑瑞思归档系统。公开目录、限制目录与密卷层，附调阅任务与权限档案。">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="曙光中央档案库">
+  <meta property="og:title" content="曙光中央档案库｜SPA Central Archive">
+  <meta property="og:description" content="桑瑞思归档系统。公开目录、限制目录与密卷层，附调阅任务与权限档案。">
+  <meta property="og:url" content="https://ksayus.github.io/SPA-Archive/">
+  <meta name="twitter:card" content="summary">
+  <title>曙光中央档案库｜SPA Central Archive</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23120d09'/%3E%3Crect x='8' y='8' width='48' height='48' rx='3' fill='none' stroke='%239b2f24' stroke-width='3'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-size='32' fill='%23e8dcc2' font-family='serif'%3E曙%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./assets/css/style.css?v=2.7.0">
+</head>
+<body>
+  <a class="skip-link" href="#app">跳到正文</a>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header" id="site-header">
+    <div class="header-top">
+      <div class="header-top-inner">
+        <span>SPA · CENTRAL ARCHIVE</span>
+        <span class="header-status"><i class="status-dot"></i> 桑瑞思在线 · <span id="clock">--:--:--</span> UTC</span>
+        <span class="header-top-right">VEL / NIM / TON / NUN</span>
+      </div>
+    </div>
+    <div class="header-main">
+      <a class="brand" href="#/">
+        <span class="brand-seal" aria-hidden="true">曙</span>
+        <span class="brand-text">
+          <strong>曙光中央档案库</strong>
+          <small>SPA CENTRAL ARCHIVE</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="主导航">
+        <a href="#/archives" data-nav="archives">档案库</a>
+        <a href="#/archives?cat=classified" data-nav="classified">密卷</a>
+        <a href="#/tasks" data-nav="tasks">调阅任务</a>
+        <a href="#/about" data-nav="about">编目基准</a>
+      </nav>
+
+      <form class="header-search" id="header-search" role="search">
+        <input type="search" name="q" placeholder="检索编号 / 关键词" aria-label="检索档案" autocomplete="off">
+        <button type="submit" aria-label="检索">⌕</button>
+      </form>
+
+      <div class="auth-area" id="auth-area"></div>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="打开菜单" aria-expanded="false">☰</button>
+    </div>
+
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <a href="#/archives">档案库</a>
+      <a href="#/archives?cat=classified">密卷</a>
+      <a href="#/tasks">调阅任务</a>
+      <a href="#/about">编目基准</a>
+      <a href="#/bookmarks">个人索引</a>
+      <a href="#/profile">权限档案</a>
+      <div class="mobile-auth" id="mobile-auth"></div>
+    </div>
+  </header>
+
+  <main class="app-shell" id="app" tabindex="-1">
+    <div class="boot-screen">
+      <div class="boot-seal">曙</div>
+      <p class="mono">SPA CENTRAL ARCHIVE · CONNECTING</p>
+      <p>正在接入桑瑞思归档系统……</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-seal">SPA</span>
+        <div>
+          <strong>曙光中央档案库</strong>
+          <p>桑瑞思（Sunrise）归档系统 · 建城第 22 年</p>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <p class="mono">VEL · NIM · TON · NUN</p>
+        <p>《死潮》同人档案站。档案为虚构创作，与现实中任何组织无关。</p>
+        <p>系统状态：<span class="text-gold">在线</span> · 数据节点：锡拉库萨</p>
+      </div>
+      <div class="footer-links">
+        <a href="#/about">编目规范</a>
+        <a href="#/tasks">调阅任务</a>
+        <a href="#/archives">全部档案</a>
+        <a href="#/login">终端登录</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>SPA // ARCHIVE TERMINAL v2.6</span>
+      <span>所有未授权调阅均会被记录</span>
+    </div>
+  </footer>
+
+  <div id="toast-root" class="toast-root" aria-live="polite"></div>
+  <div id="modal-root" class="modal-root"></div>
+
+  <noscript>
+    <div class="noscript">本档案库需要启用 JavaScript 才能接入桑瑞思归档系统。</div>
+  </noscript>
+
+  <script type="module" src="./assets/js/app.js?v=2.7.0"></script>
+</body>
+</html>
