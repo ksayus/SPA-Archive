@@ -6,8 +6,9 @@ insert into public.categories (slug, name, description, icon, sort_order) values
   ('personnel',   '人物档案',       '十三使徒、部门职员、无名者与阵亡者。', '人', 10),
   ('incident',    '事件记录',       '死潮、边境、事故、救援与未解事件。', '事', 20),
   ('organization','组织与势力',     'SPA 官署、XHA、Bamilen、UBM、风灵族与地方势力。', '组', 30),
-  ('location',    '地点与遗迹',     '锡拉库萨、旧城、托巴勒、艾灵斯、勒勒弗斯、底格络温格。', '地', 40),
+  ('location',    '地点与遗迹',     '锡拉库萨、旧城、托巴勒、艾灵斯斯、勒勒弗斯、底格络温格。', '地', 40),
   ('research',    '科研与装备',     '修斯纳、炉心、武器、mOS 与医学。', '研', 50),
+  ('system',      '系统日志',       '桑瑞思的系统运行、自检、维护窗口与延迟统计。', '系', 55),
   ('daily',       '日常观察',       '食堂、失物柜、夜班、猫与城市生活。', '日', 60),
   ('classified',  '密卷',           '不进入公开目录的档案。', '密', 70),
   ('minas',       '米钠凘个人档案', '冰之使徒米钠凘的个人档案与观察记录。', '冰', 80),
@@ -59,3 +60,9 @@ select '密卷层维护通知',
        '密卷层将于本周末进行索引重建。期间 III 级及以上档案可能出现短暂延迟。请勿在维护窗口内提交密卷调阅申请。',
        2, true
 where not exists (select 1 from public.announcements where title = '密卷层维护通知');
+
+insert into public.announcements (title, body, level, active)
+select '系统日志·公开层',
+       '桑瑞思的系统日志与自检日志已开放调阅。公开层包含晨间自检摘要与月度延迟统计；语音偏差、维护窗口、完整性校验与权限自检位于限制层。日志中的空白不代表故障。',
+       0, true
+where not exists (select 1 from public.announcements where title = '系统日志·公开层');
