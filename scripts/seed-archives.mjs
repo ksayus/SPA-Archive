@@ -43,7 +43,7 @@ const covers = {
   'canteen-wednesday-sweet-ration': 'assets/img/1792649248832.webp',
   'wind-chain-well-audio-transcript': 'assets/img/1792649248837.webp',
   'zusa-south-canal': 'assets/img/1792681250283.webp',
-  'tobal-light-herb-valley': 'assets/img/1792691907772.webp',
+  'tobal-zhi-yun-valley': 'assets/img/1792691907772.webp',
   'elings-first-snow': 'assets/img/1792691907784.webp',
   'sotern-port-fish-market': 'assets/img/1792691907794.webp',
   'jirjis-forest-temple-outskirts': 'assets/img/1792691907800.webp',
