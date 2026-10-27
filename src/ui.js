@@ -104,11 +104,11 @@ export function emptyState(title, desc = '', action = '') {
 }
 
 export function loadingBlock(text = '正在检索档案……') {
-  return `<div class="boot-screen" style="min-height:32vh"><div class="boot-seal" style="width:54px;height:54px;font-size:24px">曙</div><p class="mono">RETRIEVING</p><p>${escapeHtml(text)}</p></div>`;
+  return `<div class="boot-screen" style="min-height:32vh"><div class="boot-seal" style="width:54px;height:54px;font-size:24px">Sun</div><p class="mono">RETRIEVING</p><p>${escapeHtml(text)}</p></div>`;
 }
 
 export function setPageTitle(title) {
-  document.title = title ? `${title}｜曙光中央档案库` : '曙光中央档案库｜SPA Central Archive';
+  document.title = title ? `${title}｜Sunrise 中央档案库` : 'Sunrise 中央档案库｜SPA Central Archive';
 }
 
 export function toast(message, type = 'info', duration = 3600) {

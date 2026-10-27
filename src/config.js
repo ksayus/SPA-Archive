@@ -2,7 +2,7 @@ export const SUPABASE_URL = 'https://zolbibcrxnvqmyxkkyun.supabase.co';
 export const SUPABASE_KEY = 'sb_publishable_Fz6BNL6LnAw_tZHDc9ajvw_GKVjfSKG';
 
 export const SITE = {
-  name: '曙光中央档案库',
+  name: 'Sunrise 中央档案库',
   shortName: 'SPA Central Archive',
   version: '2.6',
   inviteCode: 'SPA-ENLIST-2026',

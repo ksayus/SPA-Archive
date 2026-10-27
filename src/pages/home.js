@@ -40,7 +40,7 @@ export const home = {
       <section class="hero">
         <div class="hero-copy">
           <div class="hero-kicker">SUNRISE ARCHIVE SYSTEM · 建城第 22 年</div>
-          <h1 class="hero-title">曙光<br><span class="accent">中央档案库</span></h1>
+          <h1 class="hero-title">Sunrise<br><span class="accent">中央档案库</span></h1>
           <p class="hero-sub">
             SPA 中央档案库由桑瑞思（Sunrise）维护。这里保存城市、使徒、边境与日常的记录。
             <strong>公开目录向所有访客开放；限制目录与密卷层按权限调阅。</strong>
