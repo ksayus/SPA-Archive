@@ -118,7 +118,7 @@ function makeTags(title, body, category) {
   return tags.slice(0, 6);
 }
 
-const featured = new Set(['SPA/RD/V-001', 'SPA/EM/NUNZUS-A-017', 'SPA/AP/HUS-008', 'SPA/AR/TON-HANDOVER-02', 'SPA/AR/TON-LAST-01', 'SPA/AR/NUN-4.4']);
+const featured = new Set(['SPA/RD/V-001', 'SPA/EM/NUNZUS-A-017', 'SPA/AP/HUS-008', 'SPA/AR/TON-HANDOVER-02', 'SPA/AR/TON-LAST-01', 'SPA/AR/NUN-12']);
 const covers = {
   'SPA/AP/HUS-008': 'assets/img/米钠凘_两处字迹.webp',
   'SPA/AR/TON-LAST-01': 'assets/img/1792649248743.webp',
