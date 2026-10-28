@@ -66,3 +66,9 @@ select '系统日志·公开层',
        '桑瑞思的系统日志与自检日志已开放调阅。公开层包含晨间自检摘要与月度延迟统计；语音偏差、维护窗口、完整性校验与权限自检位于限制层。日志中的空白不代表故障。',
        0, true
 where not exists (select 1 from public.announcements where title = '系统日志·公开层');
+
+insert into public.announcements (title, body, level, active)
+select '止芸谷与长篇档案增补',
+       '托巴勒东部山谷的正式名称已统一为“止芸谷”。本轮增补 10 卷长篇档案，涵盖止芸谷地形与药草调查、轻芸派合作备忘录、春季采药事故复盘、修斯纳腐化现场手册、菲悦语言联络档案、档案库夜班手册、XHA 审讯第二卷、编目手册第 4 版、年度系统审计与米钠凘冬季驻防评估。部分条目位于限制层，需相应权限调阅。',
+       0, true
+where not exists (select 1 from public.announcements where title = '止芸谷与长篇档案增补');
