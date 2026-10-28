@@ -5,43 +5,15 @@ import {
   openModal, renderMarkdown, setPageTitle, toast,
 } from '../ui.js';
 
-function renderLock(app, item, reason = '') {
-  setPageTitle(`${item.title} · 权限不足`);
-  const level = state.profile?.clearance ?? -1;
-  const required = clearanceInfo(item.clearance);
-  const current = level >= 0 ? clearanceInfo(level) : null;
-  const ladder = [0, 1, 2, 3, 4, 5].map((n) => {
-    const info = clearanceInfo(n);
-    return `<div class="ladder-step ${n <= level ? 'active' : ''} ${n === level ? 'current' : ''}"><b>${info.code}</b>${info.name}</div>`;
-  }).join('');
-
+function renderDenied(app, { title = '权限不足', message = '当前账号无权调阅此档案。' } = {}) {
+  setPageTitle(title);
   app.innerHTML = `
     <section class="page-head">
-      <p class="page-kicker">ACCESS CONTROL · ${escapeHtml(item.archive_no)}</p>
-      <h1 class="page-title">${escapeHtml(item.title)}</h1>
-      <p class="page-desc">${escapeHtml(item.subtitle || '限制层档案')}</p>
+      <p class="page-kicker">ACCESS DENIED</p>
+      <h1 class="page-title">${escapeHtml(title)}</h1>
+      <p class="page-desc">${escapeHtml(message)}</p>
     </section>
-    <div class="lock-screen">
-      <div class="lock-seal">密</div>
-      <p class="lock-no">${escapeHtml(item.archive_no)} · ${escapeHtml(required.code)} / ${escapeHtml(required.name)}</p>
-      <h2>此卷不在你的调阅范围内</h2>
-      <p class="lock-sub">${escapeHtml(reason || `该档案的密级为 ${required.code}（${required.name}）。你当前的权限为 ${current ? `${current.code}（${current.name}）` : '访客'}。`)}</p>
-      <p class="lock-sub" style="font-size:12px;color:#8a7454">档案正文受桑瑞思访问控制保护。目录中的标题与摘要仍可查看。</p>
-      <div class="clearance-ladder">${ladder}</div>
-      <div class="lock-actions">
-        ${state.profile
-          ? '<a class="btn btn-primary" href="#/tasks">通过调阅任务提升权限</a>'
-          : '<a class="btn btn-primary" href="#/register">登记调阅资格</a><a class="btn" href="#/login">已有账号登录</a>'}
-        <a class="btn" href="#/archives">返回档案库</a>
-      </div>
-    </div>
-    <div class="section">
-      <div class="section-head"><div><p class="section-kicker">CATALOGUE ENTRY</p><h2 class="section-title">目录条目</h2></div></div>
-      <div class="panel">
-        <p style="color:#b7a88d;font-size:13px;line-height:1.9">${escapeHtml(item.summary || '本档案未提供公开摘要。')}</p>
-        <div class="btn-row mt-16">${(item.tags || []).map((tag) => `<span class="card-tag">${escapeHtml(tag)}</span>`).join('')}</div>
-      </div>
-    </div>
+    <div class="btn-row"><a class="btn btn-primary" href="#/archives">返回档案库</a></div>
   `;
 }
 
@@ -63,7 +35,7 @@ export const archive = {
     }
 
     if (!canRead(catalogItem.clearance)) {
-      renderLock(app, catalogItem);
+      renderDenied(app);
       return;
     }
 
@@ -74,7 +46,7 @@ export const archive = {
       .maybeSingle();
     if (error) throw error;
     if (!record) {
-      renderLock(app, catalogItem, '档案正文未能载入。可能该条目刚刚被调整密级，或档案层正在维护。');
+      renderDenied(app, { title: '档案暂时无法调阅', message: '档案正文未能载入，请稍后再试。' });
       return;
     }
 
