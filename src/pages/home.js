@@ -120,6 +120,17 @@ export const home = {
         </div>
       </section>
 
+      <section class="section section-tight">
+        <div class="panel" style="display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center">
+          <div>
+            <p class="section-kicker">JOINT ARCHIVE / BAMILEN</p>
+            <h2 class="section-title" style="font-size:26px;margin:4px 0 6px">另一套档案系统，同一组身份。</h2>
+            <p style="color:#b7a88d;font-size:13px;margin:0;max-width:760px">Bamilen 档案库由埃德里奥（Etherial）维护，采用蓝白科研档案风格。两站共用 Supabase 身份系统；账号、角色与权限档案互通，档案内容与风控规则各自独立。埃德里奥不是桑瑞思：共享架构，不共享记忆。</p>
+          </div>
+          <a class="btn btn-paper" href="https://ksayus.top/Bamilen-Archive/" target="_blank" rel="noopener">打开 Bamilen 档案库 ↗</a>
+        </div>
+      </section>
+
       <section class="section">
         <div class="section-head">
           <div><p class="section-kicker">SCAN ARCHIVE</p><h2 class="section-title">馆藏扫描件</h2></div>

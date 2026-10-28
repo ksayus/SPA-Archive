@@ -53,7 +53,12 @@ export const about = {
           <p>站点为静态页面，托管于 GitHub Pages；账号、权限、任务、阅读记录与档案正文存放于 Supabase。前端使用 Supabase 匿名发布密钥，所有敏感操作通过数据库函数与行级安全策略执行。密卷正文不会进入公开目录接口。</p>
           <p>如果页面显示“权限不足”，通常不是网络错误，而是当前账号的权限档案低于该档案密级。可在“调阅任务”中提升，或联系管理员核定。</p>
 
-          <h2>六、致谢与边界</h2>
+          <h2>六、联合档案</h2>
+          <p>Bamilen 档案库（<a href="https://ksayus.top/Bamilen-Archive/" target="_blank" rel="noopener">Bamilen Archive</a>）是同一世界观下的另一套档案站，由 Bamilen 自主研发的智能体埃德里奥（Etherial）维护。站点采用蓝白科研档案风格，收录企业、智能系统、研究、安全风控、设施、交易与封存记录。</p>
+          <p>两站共用同一个 Supabase 项目与同一组 <code>profiles</code> 权限档案：你在 SPA 登记的账号可以在 Bamilen 登录，反之亦然。档案内容、阅读记录、风控规则与智能体各自独立。埃德里奥基于 Sunrise-I 架构，桑瑞思为 SPA V 型；两者共享早期 Komos 参考架构与一条旧握手协议，但不共享记忆、身份或权限。</p>
+          <p>Bamilen 的登记码为 <code>BML-ENLIST-2026</code>。已有 SPA 账号可直接登录，无需重复登记。</p>
+
+          <h2>七、致谢与边界</h2>
           <p>世界观与角色源自《死潮》设定整理及 Veltak 语言融合设定。站点内新增档案为同人补写，尽量遵循原有时间线、称谓与语言边界；与原作者设定冲突之处，以原作者设定为准。</p>
           <p>桑瑞思的归档原则：不提供定义，只提交档案；不替活着的人按下最后一个键。</p>
         </article>
@@ -79,6 +84,7 @@ export const about = {
               <a class="btn btn-sm" href="#/archives">全部档案</a>
               <a class="btn btn-sm" href="#/archives?cat=minas">米钠凘专题</a>
               <a class="btn btn-sm" href="#/archives?cat=classified">密卷层</a>
+              <a class="btn btn-sm" href="https://ksayus.top/Bamilen-Archive/" target="_blank" rel="noopener">Bamilen 档案库 ↗</a>
               <a class="btn btn-sm" href="#/tasks">调阅任务</a>
             </div>
           </div>
