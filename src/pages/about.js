@@ -55,7 +55,7 @@ export const about = {
 
           <h2>六、联合档案</h2>
           <p>Bamilen 档案库（<a href="https://ksayus.top/Bamilen-Archive/" target="_blank" rel="noopener">Bamilen Archive</a>）是同一世界观下的另一套档案站，由 Bamilen 自主研发的智能体埃德里奥（Etherial）维护。站点采用蓝白科研档案风格，收录企业、智能系统、研究、安全风控、设施、交易与封存记录。</p>
-          <p>两站共用同一个 Supabase 项目与同一组 <code>profiles</code> 权限档案：你在 SPA 登记的账号可以在 Bamilen 登录，反之亦然。档案内容、阅读记录、风控规则与智能体各自独立。埃德里奥基于 Proton 架构，桑瑞思为 SPA V 型；两者架构不同，但底层都使用 Komos 通信协议，因此可以互操作。共享协议不共享记忆、身份或权限。</p>
+          <p>两站共用同一个 Supabase 项目与同一组 <code>profiles</code> 权限档案：你在 SPA 登记的账号可以在 Bamilen 登录，反之亦然。档案内容、阅读记录、风控规则与智能体各自独立。埃德里奥基于 Proton 架构，桑瑞思为 SPA V 型；两者架构不同，但都保留 Komos 遗留层并使用其底层通信协议，因此可以互操作。后期部分 Komos 模块已弃用；共享遗留层与协议不共享记忆、身份或权限。</p>
           <p>Bamilen 的登记码为 <code>BML-ENLIST-2026</code>。已有 SPA 账号可直接登录，无需重复登记。</p>
 
           <h2>七、致谢与边界</h2>

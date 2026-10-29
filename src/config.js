@@ -4,7 +4,7 @@ export const SUPABASE_KEY = 'sb_publishable_Fz6BNL6LnAw_tZHDc9ajvw_GKVjfSKG';
 export const SITE = {
   name: 'Sunrise 中央档案库',
   shortName: 'SPA Central Archive',
-  version: '2.9.1',
+  version: '2.9.2',
   inviteCode: 'SPA-ENLIST-2026',
 };
 
