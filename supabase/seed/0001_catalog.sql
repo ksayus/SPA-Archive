@@ -7,7 +7,7 @@ insert into public.categories (slug, name, description, icon, sort_order) values
   ('incident',    '事件记录',       '死潮、边境、事故、救援与未解事件。', '事', 20),
   ('organization','组织与势力',     'SPA 官署、XHA、Bamilen、UBM、风灵族与地方势力。', '组', 30),
   ('location',    '地点与遗迹',     '锡拉库萨、旧城、托巴勒、艾灵斯斯、勒勒弗斯、底格络温格。', '地', 40),
-  ('research',    '科研与装备',     '修斯纳、炉心、武器、mOS 与医学。', '研', 50),
+  ('research',    '科研与装备',     '修斯纳、炉心、武器、MilenOS 与医学。', '研', 50),
   ('system',      '系统日志',       '桑瑞思的系统运行、自检、维护窗口与延迟统计。', '系', 55),
   ('daily',       '日常观察',       '食堂、失物柜、夜班、猫与城市生活。', '日', 60),
   ('classified',  '密卷',           '不进入公开目录的档案。', '密', 70),
