@@ -68,6 +68,12 @@ select '系统日志·公开层',
 where not exists (select 1 from public.announcements where title = '系统日志·公开层');
 
 insert into public.announcements (title, body, level, active)
+select '第一章增补·十卷入藏',
+       '依据《死潮》润色版序章与第一章，新增 10 卷档案：接待员苏利酥登记、警卫部程子任职记录、霖幻小队编制、维涅贡街与鹤归楼、丹尼尔克街 02 号仓库、科莫斯喷泉广场、索特恩人民公园 B 级事件（奎恩尼日）、血蝶与水之觉醒、Bamilen 强化冷兵器两型说明、意识体分级与称谓基准。同时修订既有条目：智能体型号统一为 VIII 型，腐化分级译名统一为普莱米特与因菲尔特，桑索托纳在册病例更正为 1 人。',
+       0, true
+where not exists (select 1 from public.announcements where title = '第一章增补·十卷入藏');
+
+insert into public.announcements (title, body, level, active)
 select '止芸谷与长篇档案增补',
        '托巴勒东部山谷的正式名称已统一为“止芸谷”。本轮增补 10 卷长篇档案，涵盖止芸谷地形与药草调查、轻芸派合作备忘录、春季采药事故复盘、修斯纳腐化现场手册、菲悦语言联络档案、档案库夜班手册、XHA 审讯第二卷、编目手册第 4 版、年度系统审计与米钠凘冬季驻防评估。部分条目位于限制层，需相应权限调阅。',
        0, true
